@@ -1,0 +1,83 @@
+package kratin_assignment_1;
+
+import java.util.Scanner;
+
+public class HealthyLifeforOlderPeople {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Hi Friends !!! Let us help you to live a happy & Healthy life as you are aged 65 and above");
+		System.out.println("************************************");
+		System.out.println("please enter your current age = ");
+		int age=sc.nextInt();
+		if(age<65)
+		{
+			System.out.println("sorry Friend !! your are less than 65 year age.Intention of application is to provide better health suggetion to those people who have age 65 and above i.e.senior setizens");
+		
+		}
+		
+		else
+		{
+			System.out.println("1. Please tell us how many old age disease you have e.g diabetes,bloodPressure,heart related problems etc= ");
+			int oldAgeProblems=sc.nextInt();
+			
+			System.out.println("2. please tell us how many hours your are sleeping at night = ");
+			int sleepingHour=sc.nextInt();
+			
+			System.out.println("3. please tell us how many kilometer distance you are walking per day = ");
+			double walkingDistance=sc.nextDouble();
+			
+			System.out.println("4.please tell us how many quantity of fruit you daily eat = ");
+			int fruitQty=sc.nextInt();
+			
+			System.out.println("5. please tell us how many cup of milk you daily Drink =  ");
+			int milkCup=sc.nextInt();
+			
+			System.out.println("6. please tell us how many glass of water you daily drink = ");
+			int waterGlass=sc.nextInt();
+			
+			System.out.println("7. please tell us how much time you give to your friends and relatives(in minute) = ");
+			int socialTime=sc.nextInt();
+			
+			// now we compare inputs given by the user with standard one.
+			
+			boolean isOldAgeProblemsEnough=oldAgeProblems<=0; // should not have old age disease.
+			boolean isSleepEnough=sleepingHour >=8;      // at least 8 hour of sleep is mandatory
+			boolean isWalkingEnough= walkingDistance >=5.0; // at least 5 km of walking is mandatory.
+			boolean isFruitQuantityEnough= fruitQty>=2;  //  least 2 piece of fruit must be consume daily.
+			boolean isMilkEnough=milkCup>=1;   // daily 1 cup of milk is mandatory.
+			boolean isWaterEnough=waterGlass>=5;  // daily 5 glass of water must be drinking.
+			boolean isSocialTimeEnough=socialTime>=60; // daily at least for 60 minute you must be mix in your community.
+			
+			// standard recommandations given by Application for Healthy life.
+			
+			System.out.println(" ************* our advice  for healthy life ************ ");
+			System.out.println("1. Old Age Disesses : "+(isOldAgeProblemsEnough ? "good !! you have no any disease." : "you have old age disease try to consult your doctor once per month."));
+			System.out.println("2. Sleeping Hours :"+(isSleepEnough ? "good !! you take enough sleep." : "you must have to take 8 hr.of  sleep for good health."));
+			System.out.println("3. Walking Distance :"+(isWalkingEnough ? "good !! you are fit." : "you must have to walk daily at least 5 km for better fitness."));
+			System.out.println("4. Fruit eating :"+(isFruitQuantityEnough ? "good !! you eat fruits daily.": " you must consume at least 2 qty of fruits daily."));
+			System.out.println("5. Milk Drinking :"+(isMilkEnough ? "good !! you have a good habit to drink milk.":"you must have to drink 1 cup of milk daily as it is complete food and provides necessary vitamins and minerals."));
+			System.out.println("6. Water Drinking :"+(isWaterEnough ? "good !! you drink enough water.":"try to drink at least 5 glass of water daily as it helps in removing toxic material from blood."));
+			System.out.println("7. Social Communication :"+(isSocialTimeEnough ?"good !! you are mix in your socity.":"you must involve in your society it will help in sharing your thoughts and ideas."));
+			
+			// extra recommendations for senior Citizens
+			
+			if(!isOldAgeProblemsEnough || !isSleepEnough || !isWalkingEnough || !isFruitQuantityEnough || !isMilkEnough || !isWaterEnough || !isSocialTimeEnough)
+			{
+				System.out.println("***********************************************************************************************************************");
+				System.out.println("******** Please Follow below guidlines for better health. *********");
+				System.out.println("A. keep yourself engage in a various activities that you like most.");
+				System.out.println("B. Take care of your health whenever you leave home.");
+				System.out.println("C. Consult to your family  doctor regularly .At least once in a month. ");
+				System.out.println("D. Do not eat fast food !! Take always health food which is making at home.");
+				System.out.println("E. Keep yourself away from addiction like Alcohol,tobacco etc.");
+				System.out.println("Do regular exercise and Yoga for at least 30 minute");
+			}
+		}
+
+		sc.close();
+
+	}
+
+}
